@@ -139,6 +139,11 @@ class Project extends Model
     {
         return $this->hasMany(QualityPlan::class);
     }
+
+    public function espTec()
+    {
+        return $this->hasMany(EspTec::class);
+    }
     //endregion
 
     //region Scopes

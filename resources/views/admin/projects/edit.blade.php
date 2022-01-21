@@ -53,22 +53,22 @@
         </div>
     </div>
 
-    {{--  <div class="row">
+    <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <h5>ESPECIFICACIONES TÉCNICAS DE CONSTRUCCIÓN</h5>
                 </div>
                 <div class="card-block">
-                    <quality-plan
+                    <esp-tec
                             p-project-image="{{ (!empty($project->espTec()->first()) && $project->espTec()->first()->count() > 0) ? asset($project->espTec()->first()->path) : ''}}"
                             p-project-name="{{ $project->name }}"
                             p-url="{{ route('admin.projects.upload_esp_tec', ['project_id' => $project->hashid]) }}">
-                    </quality-plan>
+                    </esp-tec>
                 </div>
             </div>
         </div>
-    </div>  --}}
+    </div>
 
     {{--  <div class="row">
         <div class="col-md-12">
