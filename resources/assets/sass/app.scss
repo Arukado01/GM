@@ -1,0 +1,160 @@
+//@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+@import "components/profile";
+@import "toastr";
+@import "~croppie/croppie";
+@import "components/file_upload";
+@import "components/upload_avatar";
+@import "helpers";
+
+.project-title {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.client-content {
+  margin-top: 15px;
+}
+
+.carousel {
+  border: solid 5px white;
+}
+
+.card .table {
+  &.graphic-table-cliente {
+    td {
+      padding: 2px !important;
+      &.p-2 {
+        padding: .5rem !important;
+      }
+    }
+  }
+}
+
+.chartjs-render-monitor {
+  border: solid 1px #eceeef;
+}
+
+.user-header {
+  @media (min-width: 992px) {
+    width: 11.5rem;
+    text-align: right;
+    margin-right: 10px;
+    display: block !important;
+    .dropdown {
+      float: right;
+    }
+  }
+}
+
+.fc-toolbar {
+  .fc-center {
+    text-align: center;
+
+    h2 {
+      float: none !important;
+    }
+  }
+}
+
+.lst_reports {
+  width: 100%;
+  height: 366px;
+  border-right: 1px lighten($primary-color, 25%) dashed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 12px;
+
+  @media screen and (max-width: 768px) {
+    height: 139px;
+    border-bottom: 1px #98a2db dashed;
+    border-right: none;
+    margin-bottom: 12px;
+  }
+
+  ul {
+    list-style: none;
+    margin-left: -40px;
+    padding-right: 5px;
+    li {
+      cursor: pointer;
+      padding: 10px;
+      color: $primary-color;
+      border-bottom: 1px solid;
+      &:hover {
+        color: lighten($primary-color, 15%);
+      }
+      &.selected {
+        box-sizing: border-box;
+        background-color: lighten($primary-color, 20%);
+        border-radius: 3px;
+        color: white;
+        border-bottom: 1px solid;
+      }
+    }
+  }
+}
+
+.dataTables_filter {
+  text-align: right !important;
+  label {
+    text-align: left !important;
+  }
+}
+
+.pagination {
+  flex-direction: row-reverse;
+}
+
+.dataTables_info {
+  margin-top: 10px;
+}
+
+.dataTables_paginate {
+  margin-top: 10px;
+}
+
+.fc-toolbar .fc-center {
+  text-transform: capitalize;
+  h2 {
+    font-size: 1.7rem;
+    padding-top: 6px;
+  }
+}
+
+.grafic-bar .row {
+  .col-6 {
+    padding-right: 0px;
+    padding-left: 0px;
+  } 
+  .grafic-bar-left,
+  .grafic-bar-right {
+    height: 30px;
+  }
+  .grafic-bar-left div {
+    width: 0%;
+    transition: all 2s;
+    float: right;
+    height: 100%;
+    border: transparent solid 2px;
+    background-color: green;
+    &.inactive {
+      background: transparent !important;
+      width: 40px !important;
+      border: green solid 2px;
+    }
+  }
+  .grafic-bar-right div {
+    width: 0%;
+    transition: all 2s;
+    height: 100%;
+    float: left;
+    border: transparent solid 2px;
+    background-color: red;
+    &.inactive {
+      background: transparent !important;
+      width: 40px !important;
+      border: red solid 2px;
+    }
+   }
+
+} 

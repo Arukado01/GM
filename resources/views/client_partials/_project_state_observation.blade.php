@@ -1,0 +1,1 @@
+<state-observation p-project-id="{{ $project->hashid }}"></state-observation>

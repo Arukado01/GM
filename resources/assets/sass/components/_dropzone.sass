@@ -1,0 +1,71 @@
+$brand-primary:         darken(#428bca, 6.5%) !default
+$brand-info: #8eb4cb
+
+@mixin placeholder($color, $size:"")
+  &::-webkit-input-placeholder
+    color: $color
+    @if $size != ""
+      font-size: $size
+
+  &:-moz-placeholder
+    color: $color
+    @if $size != ""
+      font-size: $size
+
+  &::-moz-placeholder
+    color: $color
+    @if $size != ""
+      font-size: $size
+
+  &:-ms-input-placeholder
+    color: $color
+    @if $size != ""
+      font-size: $size
+
+
+
+
+.date-select-content
+  i
+    font-size: 24px
+    color: $brand-primary
+
+  .cov-datepicker
+    display: block
+    cursor: pointer
+    width: 100%
+    height: 36px
+    padding: 6px 12px
+    font-size: 14px
+    line-height: 1.6
+    text-align: center
+    color: #555555
+    background: #fff none
+    border: none
+    @include placeholder($brand-primary)
+
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+
+
+  &:hover
+    i
+      color: $brand-info
+
+    .cov-datepicker
+      color: $brand-info
+      @include placeholder($brand-info)
+
+
+
+
+
+.dropzone
+  border: dashed $brand-primary
+  &.dz-drag-hover
+    border: dashed lighten($brand-primary, 35%)
+  &.dz-clickable
+    .dz-message
+      color: $brand-primary
+
+.cov-vue-date
+  width: 100%

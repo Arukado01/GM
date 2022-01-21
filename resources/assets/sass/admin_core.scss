@@ -1,0 +1,96 @@
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.css";
+@import "toastr";
+@import "~croppie/croppie";
+@import "components/file_upload";
+@import "components/upload_avatar";
+@import "helpers";
+@import "components/dropzone";
+
+$primary-color: #3f51b5;
+.text-helper-tooltip {
+  position: absolute;
+}
+
+.site-navbar {
+  &.navbar-inverse {
+    .navbar-nav {
+      .nav-link:focus {
+        background: none;
+      }
+    }
+  }
+}
+
+.site-menu {
+  li {
+    &.active {
+      border-left: solid 3px white;
+      a.submenu-toggle {
+        padding-left: 0.8rem;
+      }
+      &.open {
+        .submenu {
+          display: block;
+          li.active {
+            border-left: solid 5px darken($primary-color, 25%);
+            a {
+              padding-left: 11px !important;
+              span.menu-text {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.menubar-inverse, body.menubar-inverse .site-menu li.open
+.navbar-brand {
+  > .brand-name {
+    font-weight: 300;
+  }
+
+  > .brand-icon {
+    font-weight: 500;
+  }
+}
+
+.grafic-bar .row {
+  .col-6 {
+    padding-right: 0px;
+    padding-left: 0px;
+  } 
+  .grafic-bar-left,
+  .grafic-bar-right {
+    height: 30px;
+  }
+  .grafic-bar-left div {
+    width: 0%;
+    transition: all 2s;
+    float: right;
+    height: 100%;
+    border: transparent solid 2px;
+    background-color: green;
+    &.inactive {
+      background: transparent !important;
+      width: 40px !important;
+      border: green solid 2px;
+    }
+  }
+  .grafic-bar-right div {
+    width: 0%;
+    transition: all 2s;
+    height: 100%;
+    float: left;
+    border: transparent solid 2px;
+    background-color: red;
+    &.inactive {
+      background: transparent !important;
+      width: 40px !important;
+      border: red solid 2px;
+    }
+   }
+
+} 
